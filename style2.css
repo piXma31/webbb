@@ -1,0 +1,116 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center; /* Align items vertically */
+    }
+    header h1 {
+      margin: 0;
+      flex: 1; /* Grow to fill remaining space */
+      text-align: center; /* Align text in the middle */
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+    }
+    .recipe-details img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    .recipe-details ul {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+    .recipe-details ul li {
+      list-style-type: disc;
+      margin-bottom: 5px;
+    }
+    .recipe-details h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .recipe-details p {
+      margin-bottom: 10px;
+    }
+    .btn-home {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .btn-home:hover {
+      background-color: #0056b3;
+    }
+
+    .fade-in {
+  animation: fadeInAnimation 0.5s ease-in forwards;
+}
+
+.fade-out {
+  animation: fadeOutAnimation 0.5s ease-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.external-link-button {
+            text-decoration: none;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 0px;
+        }
+        .external-link-icon {
+            margin-left: 5px;
+        }
+
+/* Apply specific styles to ensure consistent image size and alignment */
+.recipe-details img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover; /* Crop the image if needed to fit */
+  width: 700px; /* Set the desired width for all images */
+  height: 500px; /* Set the desired height for all images */
+}
+
+ul {
+  overflow-wrap: break-word; /* Break words if they exceed the width of the container */
+  max-width: 77ch; /* Adjust this value as needed to control the number of characters before a break */
+}
+

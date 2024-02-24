@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Menu Pilihan</title>
+</head>
+<body class="fade-in">
+  <header>
+    <h1>Menu Pilihan</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search By Ingredient">
+      <button onclick="toggleTranslation()">Translate To Malay</button>
+    </div>
+  </header>
+  <div id="noResultsMessage" class="no-results" style="display: none;">No Results</div>
+  <div class="container">
+    <!-- Biryani Rice -->
+    <div class="shadow-box">
+      <a href="biryani_rice.html">
+      <img src="img/biryani rice.jpg" alt="Biryani Rice">
+      <p class="recipe-title">Biryani Rice</p>
+      <p class="chef-name">Chef: John Doe</p>
+      <div class="ingredients">
+        <p>Rice</p>
+        <p>Chicken</p>
+        <p>Spices</p>
+      </div>
+    </a>
+    </div>
+
+    <!-- Ayam Masak Bali -->
+    <div class="shadow-box">
+      <a href="ayam_masak_bali.html">
+      <img src="img/ayam_masak_bali.jpg" alt="Ayam Masak Bali">
+      <p class="recipe-title">Ayam Masak Bali</p>
+      <p class="chef-name">Chef: Michael Lee</p>
+      <div class="ingredients">
+        <p>Chicken</p>
+        <p>Shallots</p>
+        <p>Garlic</p>
+        <p>Chili</p>
+        <p>Tamarind Paste</p>
+        <p>Coconut Milk</p>
+      </div>
+    </a>
+    </div>
+
+<!-- Nasi Goreng Cina -->
+<div class="shadow-box">
+  <a href="nasi_goreng_cina.html">
+  <img src="img/nasi_goreng_cina.jpg" alt="Nasi Goreng Cina">
+  <p class="recipe-title">Nasi Goreng Cina</p>
+  <p class="chef-name">Chef: Wang Wei</p>
+  <div class="ingredients">
+    <p>Rice</p>
+    <p>Shrimp</p>
+    <p>Chicken</p>
+    <p>Eggs</p>
+    <p>Carrots</p>
+    <p>Green Onions</p>
+  </div>
+</a>
+</div>
+    <!-- Muffin Pandan Halia -->
+    <div class="shadow-box">
+      <a href="muffin_pandan_halia.html">
+      <img src="img/muffin_pandan_halia.jpg" alt="Muffin Pandan Halia">
+      <p class="recipe-title">Muffin Pandan Halia</p>
+      <p class="chef-name">Chef: Sophie Wong</p>
+      <div class="ingredients">
+        <p>Flour</p>
+        <p>Sugar</p>
+        <p>Eggs</p>
+        <p>Milk</p>
+        <p>Pandan Leaves</p>
+        <p>Ginger</p>
+      </div>
+    </a>
+    </div>
+    <!-- Kek Tapak Kuda -->
+<div class="shadow-box">
+  <a href="kek_tapak_kuda.html">
+  <img src="img/kek_tapak_kuda.jpg" alt="Kek Tapak Kuda">
+  <p class="recipe-title">Kek Tapak Kuda</p>
+  <p class="chef-name">Chef: Fatimah Abdullah</p>
+  <div class="ingredients">
+    <p>Flour</p>
+    <p>Eggs</p>
+    <p>Sugar</p>
+    <p>Butter</p>
+    <p>Chocolate</p>
+    <p>Walnuts</p>
+  </div>
+</a>
+</div>
+    <!-- Spaghetti -->
+    <div class="shadow-box">
+      <a href="spaghetti.html">
+      <img src="img/spaghetti.jpg" alt="Spaghetti">
+      <p class="recipe-title">Spaghetti</p>
+      <p class="chef-name">Chef: Maria Smith</p>
+      <div class="ingredients">
+        <p>Pasta</p>
+        <p>Tomato Sauce</p>
+        <p>Cheese</p>
+      </div>
+    </a>
+    </div>
+    <!-- Stir-fry Vegetables -->
+    <div class="shadow-box">
+      <a href="biryani_rice.html">
+      <img src="img/stirfry.jpg" alt="Stir-fry Vegetables">
+      <p class="recipe-title">Stir-fry Vegetables</p>
+      <p class="chef-name">Chef: David Johnson</p>
+      <div class="ingredients">
+        <p>Vegetables</p>
+        <p>Soy Sauce</p>
+        <p>Oil</p>
+      </div>
+    </a>
+    </div>
+    <!-- Grilled Salmon -->
+    <div class="shadow-box">
+      <a href="biryani_rice.html">
+      <img src="img/grilled_salmon.jpg" alt="Grilled Salmon">
+      <p class="recipe-title">Grilled Salmon</p>
+      <p class="chef-name">Chef: Emily Wilson</p>
+      <div class="ingredients">
+        <p>Salmon Fillet</p>
+        <p>Garlic</p>
+        <p>Lemon</p>
+        <p>Herbs</p>
+      </div>
+    </a>
+    </div>
+
+    <!-- Tandoori Chicken -->
+<div class="shadow-box">
+  <a href="biryani_rice.html">
+  <img src="img/tandoori_chicken.jpg" alt="Tandoori Chicken">
+  <p class="recipe-title">Tandoori Chicken</p>
+  <p class="chef-name">Chef: Ali Khan</p>
+  <div class="ingredients">
+    <p>Chicken</p>
+    <p>Yogurt</p>
+    <p>Spices</p>
+    <p>Garlic</p>
+    <p>Ginger</p>
+    <p>Lemon Juice</p>
+  </div>
+</a>
+</div>
+
+  </div>
+  <script>
+
+var translateToMalayState = false; // Initially set to false
+
+    function toggleTranslation() {
+      translateToMalayState = !translateToMalayState;
+      translateIngredients();
+    }
+
+    function translateIngredients() {
+      var ingredients = document.querySelectorAll(".ingredients p");
+      ingredients.forEach(function(ingredient) {
+        translateText(ingredient);
+      });
+    }
+
+    function translateText(element) {
+  var text = element.textContent.trim().toLowerCase();
+  var langFrom = translateToMalayState ? 'en' : 'ms'; // English to Malay or Malay to English
+  var langTo = translateToMalayState ? 'ms' : 'en';
+  var url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${langFrom}&tl=${langTo}&dt=t&q=${encodeURI(text)}`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data[0] && data[0][0]) {
+        var translatedText = data[0][0][0]; // Get translated text
+        var capitalizedText = translatedText.charAt(0).toUpperCase() + translatedText.slice(1); // Capitalize first letter
+        element.textContent = capitalizedText; // Update the text content with capitalized text
+      }
+    })
+    .catch(error => console.error('Error translating:', error));
+}
+
+
+   function filterRecipes() {
+  var searchInput = document.getElementById("searchInput").value.trim().toLowerCase();
+  var recipeCards = document.querySelectorAll(".shadow-box");
+  var resultsFound = false; // Flag to track if any matching recipes are found
+
+  recipeCards.forEach(function(card) {
+    var title = card.querySelector(".recipe-title").textContent.toLowerCase();
+    var ingredients = card.querySelectorAll(".ingredients p");
+    var found = false;
+
+    ingredients.forEach(function(ingredient) {
+      var ingredientText = ingredient.textContent.toLowerCase();
+      if (ingredientText.includes(searchInput)) {
+        found = true;
+        resultsFound = true;
+      }
+    });
+
+    if (title.includes(searchInput) || found) {
+      card.style.display = "block"; // Display the card if it matches the search input or ingredient
+    } else {
+      card.style.display = "none"; // Hide the card if it doesn't match
+    }
+  });
+
+  // Show "No Results" message if no matching ingredients or recipes are found
+  var noResultsMessage = document.getElementById("noResultsMessage");
+  if (!resultsFound && searchInput !== "") {
+    noResultsMessage.style.display = "block";
+  } else {
+    noResultsMessage.style.display = "none";
+  }
+}
+
+function toggleTranslation() {
+  translateToMalayState = !translateToMalayState;
+  translateIngredients();
+  var translationButton = document.querySelector('.search-bar button');
+  translationButton.textContent = translateToMalayState ? 'Translate to English' : 'Translate to Malay';
+}
+
+// Event listener for real-time search as the user types
+document.getElementById("searchInput").addEventListener("input", filterRecipes);
+  </script>
+</body>
+</html>
